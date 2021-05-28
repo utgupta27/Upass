@@ -66,7 +66,7 @@ class menu():
             elif choice == 2:
                 self.addMenu()
             elif choice == 3:
-                pass
+                self._removeMenu()
             elif choice == 4:
                 pass
             elif choice == 5:
@@ -75,6 +75,22 @@ class menu():
                 print("## Logging Out ##")
                 print("Press Enter to Continue...")
                 input("")
+                break
+
+    def _removeMenu(self):
+        while True:
+            os.system('clear')
+            print("""
+        *********DELETE ENTRY**********
+            1.Enter Website Name
+            2.Back to Main Menu""")
+            choice =  int(input("Enter Your Choice :"))
+            if choice == 1:
+                websiteName = input("Enter the WebSite Name: ")
+                self.obj.removePassword(self.userName,self.userPassword,websiteName)
+                print("Item Removed From the List\nPress Enter to Continue...")
+                input('')
+            elif choice==2:
                 break
 
     def _loginMenu(self):

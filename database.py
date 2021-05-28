@@ -51,6 +51,17 @@ class UserBase():
             os.remove(path)
             return True
 
+    def removePassword(self,userName,userPassword,site):
+        Encrypt().decryptdata(userName, userPassword)
+        self.removeOldDatabase(userName)
+        self.connectionEstablish(userName)
+        query = "DELETE FROM USER WHERE SITE=?"
+        self.cursor.execute(query,(site,))
+        self.connectionEnd(userName)
+        Encrypt().encryptdata(userName, userPassword)
+        self.removeTemp(userName)
+
+
     def createUserAccount(self,userName,userPassword):
         # create a table inside tha database brfore encrypting it
         conn = sqlite3.connect(userName+'.db')
