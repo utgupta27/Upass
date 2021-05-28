@@ -5,7 +5,7 @@ An encrypted and secure command line password manager tool.
 - In Memory Decryption
 - Graphical User Interface
 - Support for Windows
-- Suggestion of Randomly Ganerated Passwords
+- Suggestion of Randomly Generated Passwords
 - Copy the passwords to the clipboard.
 - Reminder to replace weak passwords using suggested one.
 

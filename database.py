@@ -61,6 +61,10 @@ class UserBase():
         Encrypt().encryptdata(userName,userPassword)
         self.removeTemp(userName)
 
+    def deleteUserAccount(self,userName):
+        path = self.getdir() + '/' + userName + '.db.crypt'
+        os.remove(path)
+
     def showAllPassword(self,userName,userPassword):
         Encrypt().decryptdata(userName,userPassword)
         self.removeOldDatabase(userName)

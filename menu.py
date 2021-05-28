@@ -48,6 +48,7 @@ class menu():
         press enter to continue...""")
         input("")
 
+
     def _loginSubMenu(self):
         while True:
             os.system('clear')
@@ -55,7 +56,7 @@ class menu():
             print("""
             1. Show All Passwords
             2. Add New Password
-            3. Remove New Password
+            3. Remove Password From List
             4. Change Master Password
             5. Delete Account
             6. Logout\n""")
@@ -69,7 +70,7 @@ class menu():
             elif choice == 4:
                 pass
             elif choice == 5:
-                pass
+                self._deleteMenu()
             elif choice == 6:
                 print("## Logging Out ##")
                 print("Press Enter to Continue...")
@@ -98,6 +99,28 @@ class menu():
                 self.obj.createUserAccount(self.userName,self.userPassword)
             elif choice==2:
                 break        
+
+    def _deleteMenu(self):
+        while True:
+            os.system('clear')
+            print("""
+        *********DELETE USER ACCOUNT**********
+            1.Enter Credentials
+            2.Back to Main Menu""")
+            choice =  int(input("Enter Your Choice :"))
+            if choice == 1:
+                self._getDetails()
+                if self.obj.verify(self.userName, self.userPassword) == True:
+                    self.obj.deleteUserAccount(self.userName)
+                    print("Account Deleted Successfully.\nPress Enter to Exit")
+                    input('')
+                    exit()
+                else:
+                    print("\n## Incorrect Credentials ##")
+                    print("Press Enter to Resubmit Credentials")
+                # self.obj.createUserAccount(self.userName,self.userPassword)
+            elif choice==2:
+                break
 
 if __name__ == "__main__":
     menuobj = menu()
