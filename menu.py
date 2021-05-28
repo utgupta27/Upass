@@ -11,8 +11,8 @@ class menu():
 
     def _getData(self):
         self.siteName = input("Enter the Name of Website: ")
-        self.siteUserName = input("Enter the Website Username : ")
-        self.sitePassword = input("Enter tha website Password: ")
+        self.siteUserName = input("Enter Website Username : ")
+        self.sitePassword = input("Enter Website Password: ")
 
     def _mainMenu(self):
         while True:
