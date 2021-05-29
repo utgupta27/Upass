@@ -28,3 +28,8 @@ using AES256-CBC encryption algorithm available in pyAesCrypt library.
         Type command: $python3 main.py
 
 ## Screenshots
+![alt text](https://github.com/utgupta27/Upass/blob/master/res/Screenshot-20210529142055-564x240.png)
+![alt text](https://github.com/utgupta27/Upass/blob/master/res/Screenshot-20210529142249-561x318.png)
+![alt text](https://github.com/utgupta27/Upass/blob/master/res/Screenshot-20210529142356-972x227.png)
+![alt text](https://github.com/utgupta27/Upass/blob/master/res/Screenshot-20210529142440-537x230.png)
+![alt text](https://github.com/utgupta27/Upass/blob/master/res/Screenshot-20210529142504-535x247.png)
